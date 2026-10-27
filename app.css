@@ -9,6 +9,42 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: auto;
 }
+/* Mobil cihazlar için (Örn: 768px ve altı) */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Yatay kaydırmaları engeller */
+    padding: 10px;
+  }
+
+  /* Ana container veya grid yapülarını tek sütuna çevir */
+  .container, .main-layout, .grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Yan yana duran panelleri alt alta al */
+  .sol-menu, .icerik-alani, .sag-panel {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  /* Üst başlık ve logoların mobilde sığması için font boyutlarını küçült */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .banner-text {
+    font-size: 0.9rem !important;
+  }
+
+  /* Tabloların veya geniş bileşenlerin taşmasını önle */
+  table, img, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 /* Arka Planda Hareketli Siber Izgara ve Neon Nabız Efekti */
 body::before {
