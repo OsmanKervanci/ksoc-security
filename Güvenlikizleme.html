@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC Monitoring - KSOC</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <table class="main-table" border="0" cellspacing="0" cellpadding="0">
+        <!-- HEADER & LOGO -->
+        <tr height="12%" valign="middle">
+            <td colspan="3" class="header-bg">
+                <table border="0" width="100%" cellspacing="0" cellpadding="0" style="border: none; border-collapse: collapse;">
+                    <tr>
+                        <!-- Sol: Logo Başlığı -->
+                        <td style="padding-left: 25px; width: 30%;">
+                            <span class="logo-title">KSOC</span><br> 
+                            <span class="logo-subtitle"><span class="live-indicator"></span>SOC MONITORING ACTIVE</span>
+                        </td>
+                        
+                        <!-- Orta: Canlı Siber Güvenlik Zaman Kanalı -->
+                        <td align="center" style="width: 35%;">
+                            <div style="font-family: monospace; font-size: 11px; color: #00f3ff; background: #040810; border: 1px solid #1f365c; border-radius: 6px; padding: 6px 15px; display: inline-block; letter-spacing: 1px;">
+                                <span style="color: #00ff66;">● SECURE_CHANNEL:</span> <span style="color: #e6edf3;" id="live-clock">2026-10-27 17:14:00</span>
+                            </div>
+                        </td>
+
+                        <!-- Sağ: Profesyonel Sosyal Medya İkonları -->
+                        <td align="right" style="padding-right: 25px; width: 25%;">
+                            <div style="display: flex; gap: 8px; align-items: center; justify-content: flex-end;">
+                                <!-- LinkedIn -->
+                                <a href="https://linkedin.com" target="_blank" title="LinkedIn" style="width: 30px; height: 30px; background: #111c30; border: 1px solid #1f365c; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #00f3ff; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.background='#00f3ff'; this.style.color='#010409';" onmouseout="this.style.background='#111c30'; this.style.color='#00f3ff';">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                                <!-- GitHub -->
+                                <a href="https://github.com" target="_blank" title="GitHub" style="width: 30px; height: 30px; background: #111c30; border: 1px solid #1f365c; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #00f3ff; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.background='#00f3ff'; this.style.color='#010409';" onmouseout="this.style.background='#111c30'; this.style.color='#00f3ff';">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                </a>
+                                <!-- Twitter/X -->
+                                <a href="https://twitter.com" target="_blank" title="Twitter" style="width: 30px; height: 30px; background: #111c30; border: 1px solid #1f365c; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #00f3ff; text-decoration: none; transition: all 0.2s;" onmouseover="this.style.background='#00f3ff'; this.style.color='#010409';" onmouseout="this.style.background='#111c30'; this.style.color='#00f3ff';">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                </a>
+                            </div>
+                        </td>
+
+                        <!-- En Sağ: Logo -->
+                        <td align="right" style="padding-right: 25px; width: 10%;">
+                            <a href="main.html" title="Ana Sayfaya Dön">
+                                <img src="resimler/logo12.png" alt="KSOC Logo" class="logo-img">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- BANNER / HİZMET BAŞLIĞI -->
+        <tr height="18%">
+            <td colspan="3" class="banner-bg">
+                <h2 class="banner-title">SOC MONITORING (GÜVENLİK İZLEME)</h2>
+                <p class="banner-desc">7/24 KESİNTİSİZ TEHDİT TESPİTİ VE ANOMALİ YÖNETİMİ</p>
+            </td>
+        </tr>
+
+        <!-- NAVİGATOR (Geri Dön Tuşu) -->
+        <tr height="8%" valign="middle">
+            <td align="center" colspan="3" class="nav-bg">
+                <div class="nav-container">
+                    <a href="main.html" class="nav-btn">&#10094; ANA SAYFAYA DÖN</a>
+                </div>
+            </td>
+        </tr>
+
+        <!-- İÇERİK ALANI -->
+        <tr height="57%" valign="top">
+            <td colspan="3" class="content-bg" style="padding: 40px;">
+                <h3 style="color: #00f3ff; font-size: 22px; margin-top: 0; border-bottom: 2px solid #1f365c; padding-bottom: 10px;">
+                    Güvenlik İşlemleri Merkezi (SOC) Nedir?
+                </h3>
+
+                <div style="font-size: 14px; line-height: 1.8; color: #c9d1d9;">
+                    <img src="resimler/ksoc-logo..png" alt="şirket logosu" class="content-image" align="right" width="320" height="320" style="margin-left: 30px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #00f3ff; box-shadow: 0 0 15px rgba(0,243,255,0.2);">
+                    
+                    <p>
+                        Bir güvenlik operasyonları merkezi, bir kurumun siber güvenlik duruşunu iyileştirmek ve tehditleri önlemek, tespit etmek ve bunlara yanıt vermekten sorumlu merkezi bir fonksiyon veya ekip yapısıdır. SOC ekibi; kimlikleri, uç noktaları, sunucuları, veritabanlarını, ağ uygulamalarını, web sitelerini ve diğer sistemleri izleyerek potansiyel siber saldırıları hızlı bir şekilde tespit eder ve etkilerini azaltır.
+                    </p>
+                    
+                    <p>
+                        Siber tehditler, geçici güvenlik önlemlerinin tek başına tam anlamıyla etkili olamayacağı kadar karmaşık ve kalıcı hâle gelmiştir. Saldırganlar sürekli olarak faaliyet gösterir ve çoğu zaman güvenlik ekipleri görevde değilken kurumları hedef alır. Özel olarak ayrılmış bir SOC, kritik varlıkları korumak, yanıt sürelerini en aza indirmek ve ihlallerin etkisini azaltmak için günün her saati dikkatli bir şekilde çalışır.
+                    </p>
+
+                    <h4 style="color: #00f3ff; margin-top: 25px; font-size: 16px;">NOC ve SOC İş Birliği</h4>
+                    <p>
+                        Bir SOC siber güvenlik tehditlerine odaklanırken, bir ağ operasyonları merkezi (NOC) BT altyapısının performansını ve kullanılabilirliğini yönetir. NOC, ağların sorunsuz çalışmasını sağlar, bağlantı sorunlarını giderir ve çalışma süresini korur. Bu ekipler, olağandışı ağ davranışlarında anında koordinasyon sağlayarak kurumsal dayanıklılığı artırır.
+                    </p>
+
+                    <h4 style="color: #00f3ff; margin-top: 25px; font-size: 16px;">Yapay Zeka Destekli Savunmaya Geçiş</h4>
+                    <p>
+                        Günümüzün SOC'leri, basit izleme ve log takibinden uzaklaşarak yapay zeka destekli platformlar kullanmaktadır. Bu platformlar devasa veri hacimlerini analiz eder, ince desenleri algılar ve yanıt eylemlerini otomatikleştirerek yarının tehditlerine karşı istihbarat odaklı savunma sağlar.
+                    </p>
+                </div>
+            </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr height="5%" valign="middle">
+             <td align="center" colspan="3" class="footer-bg">
+                 <span class="footer-text">&copy; 2026 KSOC - KERVANCI SECURITY OPERATIONS CENTER &bull; SECURE SYSTEM ACTIVE</span>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // Canlı Saat Güncelleyici
+        function updateClock() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('live-clock').innerText = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
